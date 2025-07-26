@@ -68,7 +68,7 @@ try:
         ('East LA', '34.0239,-118.1817'),
     ]
 
-    keywords = ['salvadoran', 'pupusas', 'pupuseria', 'salvadorean']
+    keywords = ['salvadoran', 'pupusas', 'pupuseria', 'salvadorean', 'pulgarsito']
     all_places = {}
 
     for area_name, location in la_areas:
@@ -80,7 +80,7 @@ try:
             params = {
                 'key': API_KEY,
                 'location': location,
-                'radius': 10000,
+                'radius': 15000,
                 'keyword': keyword
             }
             
@@ -112,8 +112,8 @@ try:
         print(f"Final dataset: {len(df)} unique Salvadoran restaurants")
         
         # Save to CSV
-        df.to_csv("salvi_restaurants_full.csv", index=False)
-        print("Data saved to 'salvadoran_restaurants_full.csv'")
+        df.to_csv("unfiltered_rating_restaurants.csv", index=False)
+        print("Data saved to unfiltered_rating_restaurants.csv")
 
 except requests.exceptions.RequestException as e:
     print(f"Request failed: {e}")
