@@ -4,18 +4,18 @@
 
 An automated data pipeline that discovers, filters, and visualizes high-rated Salvadoran restaurants across Los Angeles using Google Places API and interactive mapping.
 
-## 🗺️ Live Demo
+## Live Demo
 
 The pipeline generates an interactive map showing 4.5+ star Salvadoran restaurants across LA, with detailed popups containing restaurant information, ratings, and addresses.
 
-## 🚀 Features
+## Features
 
 - **Comprehensive Search**: Searches 10 major LA areas with multiple Salvadoran-related keywords
 - **Data Quality Validation**: Automatic validation of restaurant ratings and data integrity  
 - **Interactive Visualization**: Clean, responsive map with restaurant details and ratings
 - **Automated Pipeline**: Single command execution with dependency checking and error handling
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ├── allareas.py                          # Data collection from Google Places API
@@ -27,7 +27,7 @@ The pipeline generates an interactive map showing 4.5+ star Salvadoran restauran
 └── README.md                            # Project documentation
 ```
 
-## 🛠️ Installation
+## Installation
 
 1. **Clone the repository**
    ```bash
@@ -47,7 +47,7 @@ The pipeline generates an interactive map showing 4.5+ star Salvadoran restauran
      GOOGLE_PLACES_API_KEY=your_api_key_here
      ```
 
-## 🏃‍♂️ Usage
+## Usage
 
 ### Quick Start (Recommended)
 ```bash
@@ -68,7 +68,7 @@ python rating.py
 python map_markers.py
 ```
 
-## 📊 Pipeline Stages
+## Pipeline Stages
 
 ### 1. Data Collection (`allareas.py`)
 - Searches 10 LA areas: Downtown, Hollywood, Beverly Hills, Santa Monica, etc.
@@ -90,7 +90,7 @@ python map_markers.py
 - Generates responsive HTML visualization
 - **Output**: `high_salvadoran_restaurants_la.html`
 
-## 🔧 Configuration
+## Configuration
 
 ### Search Areas
 Modify the `la_areas` list in `allareas.py` to change search locations:
@@ -113,20 +113,20 @@ Change the minimum rating in `rating.py`:
 filtered_rating = df[df['rating'] >= 4.5]  # Adjust threshold here
 ```
 
-## 📋 Output Files
+## Output Files
 
 - `unfiltered_rating_restaurants.csv` - Raw restaurant data from Google Places
 - `filtered_rating_restaurants.csv` - High-rated restaurants only (4.5+ stars)
 - `high_salvadoran_restaurants_la.html` - Interactive map (open in browser)
 
-## 🔒 Privacy & API Usage
+## Privacy & API Usage
 
 - **No sensitive data**: Only public restaurant information is collected
 - **API rate limiting**: Includes proper delays between API requests
 - **Cost awareness**: Searches are optimized to minimize API calls
 - **Data retention**: Only stores essential restaurant metadata
 
-## 🛡️ Error Handling
+## Error Handling
 
 The pipeline includes comprehensive error handling:
 - API key validation
@@ -135,7 +135,7 @@ The pipeline includes comprehensive error handling:
 - Data quality validation
 - Graceful failure with informative error messages
 
-## 📈 Extending the Pipeline
+## Extending the Pipeline
 
 ### Add New Cuisines
 1. Modify `keywords` list in `allareas.py`
@@ -150,7 +150,7 @@ The pipeline includes comprehensive error handling:
 1. Add fields to the data extraction in `allareas.py`
 2. Update popup template in `map_markers.py`
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
